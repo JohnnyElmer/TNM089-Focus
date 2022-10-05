@@ -1,5 +1,9 @@
 function[FM] = Variance(image)
-    FM = 0;
 
+FM = var(image(:));    
 
 end
+
+
+%https://se.mathworks.com/matlabcentral/fileexchange/27314-focus-measure
+%CASE 
