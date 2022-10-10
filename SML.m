@@ -15,6 +15,7 @@ M = [-1 2 -1];
 Lx = imfilter(image, M, 'replicate', 'conv');
 Ly = imfilter(image, M', 'replicate', 'conv');
 FM = abs(Lx) + abs(Ly);
-FM = mean2(FM);
+%FM = mean2(FM);
+FM = sum(FM, 'all');
 
 end
