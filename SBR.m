@@ -34,11 +34,12 @@ FM(mask) = 0;
 FM2(~mask) = 0;
 
 %Summera alla värden och konvertera tillbaka till real värden
-FM = uint8(real(FM));
-FM2 = uint8(real(FM2));
-
-FM = FM2./FM;
+FM = (real(FM));
+FM2 = (real(FM2));
 FM = sum(FM, 'all');
-FM = ifft(ifftshift(FM));
+FM2 = sum(FM2, 'all');
+
+FM = FM/FM2;
+%FM = ifft2(ifftshift(FM));
 
 end

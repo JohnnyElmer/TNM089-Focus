@@ -32,8 +32,10 @@ mask = circle < r;
 FM(mask) = 0;
 
 %Summera alla värden och konvertera tillbaka till real värden
-FM = uint8(real(FM));
+FM = (real(FM));
 FM = sum(FM, 'all');
-FM = ifft(ifftshift(FM));
+
+
+%FM = ifft2(ifftshift(FM));
 
 end
