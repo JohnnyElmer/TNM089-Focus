@@ -23,7 +23,7 @@ Y = Y';
 circle = sqrt((X-M/2).^2 + (Y-N/2).^2);
 
 %Define radius based on image size
-r = (((M + N) / 2) / 5);
+r = (((M + N) / 2) / 15);
 
 %Create a mask for seperating high and low frequencies
 mask = circle < r;
